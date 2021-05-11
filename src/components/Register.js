@@ -47,7 +47,7 @@ class Register extends React.Component {
   render() {
     return (
       <>
-        {/* Display Header */}
+        { /* Display Header */}
         <Header history={this.props.history} />
 
         {/* Display Register fields */}
