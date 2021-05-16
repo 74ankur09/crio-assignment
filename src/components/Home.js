@@ -5,8 +5,7 @@ import "./Home.css";
 
 export default function App() {
   return (
-    <>
-      {/* Display "Home" page content */}
+      //{/* Display "Home" page content */}
       <div className="flex-container">
         <div className="home-container container">
           <h1 className="home-welcome-text">
@@ -23,10 +22,15 @@ export default function App() {
             </Link>
 
             {/* TODO: CRIO_TASK_MODULE_UNDERSTANDING_BASICS - Add a Login button */}
+            <div className="home-buttons">
+            <Link to="/login">
+              <Button id="register-button" className="btn-block" type="primary" block={true}>
+                Login
+              </Button>
+            </Link>
             
           </div>
         </div>
       </div>
-    </>
   );
 }
