@@ -94,7 +94,7 @@ class Register extends React.Component {
             />
 
             {/* Antd component which renders a formatted <button type="button"> field */}
-            <Button
+            <Button onClick={this.register}
               loading={this.state.loading}
               type="primary"
               // TODO: CRIO_TASK_MODULE_UNDERSTANDING_BASICS - Add an event handler which calls the "register()" function when the button is clicked
