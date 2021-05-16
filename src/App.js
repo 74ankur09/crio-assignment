@@ -30,8 +30,9 @@ export default function App(props) {
         <Login/>
       </Route>
       <Route path="/register">
-        <Register/>  
+        <Register/>
         </Route>
+
 
         </Switch>
     </div>

@@ -25,7 +25,7 @@ export default function App() {
             {/* TODO: CRIO_TASK_MODULE_UNDERSTANDING_BASICS - Add a Login button */}
             <div className="home-buttons">
             <Link to="/login">
-              <Button id="register-button" className="btn-block" type="primary" block={true}>
+              <Button id="login-button" className="btn-block" type="primary" block={true}>
                 Login
               </Button>
             </Link>
