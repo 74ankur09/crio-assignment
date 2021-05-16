@@ -25,7 +25,7 @@ export default function App(props) {
 
         <Route path="/">
           <Home />
-        </Route>
+        </Route> 
       <Route path="/register">
         <Register/>  
       </Route>
