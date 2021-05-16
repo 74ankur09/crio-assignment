@@ -81,8 +81,7 @@ class Login extends React.Component {
               loading={this.state.loading}
               type="primary"
               onClick={this.login}
-            >
-              Login
+            >Login
             </Button>
           </div>
         </div>
