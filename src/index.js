@@ -10,9 +10,4 @@ ReactDOM.render(
       <App />
     </BrowserRouter>
   </React.StrictMode>,
-<<<<<<< HEAD
-  // TODO: CRIO_TASK_MODULE_UNDERSTANDING_BASICS - Add Target container ID (refer public/index.html)
-   document.getElementById('root')
-=======
->>>>>>> 0028914987b519f8b78b9b157c3a1d7226433d58
 );

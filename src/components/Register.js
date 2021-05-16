@@ -144,11 +144,7 @@ class Register extends React.Component {
   render() {
     return (
       <>
-<<<<<<< HEAD
-        { /* Display Header */}
-=======
         {/* Display Header */}
->>>>>>> 0028914987b519f8b78b9b157c3a1d7226433d58
         <Header history={this.props.history} />
 
         {/* Display Register fields */}
@@ -172,11 +168,6 @@ class Register extends React.Component {
             <Input.Password
               className="input-field"
               prefix={<LockOutlined className="site-form-item-icon" />}
-<<<<<<< HEAD
-              placeholder="Password"
-              // TODO: CRIO_TASK_MODULE_UNDERSTANDING_BASICS - Add a placeholder text, "Password" to the input bar
-=======
->>>>>>> 0028914987b519f8b78b9b157c3a1d7226433d58
               onChange={(e) => {
                 this.setState({
                   password: e.target.value,
@@ -184,16 +175,8 @@ class Register extends React.Component {
               }}
             />
 
-<<<<<<< HEAD
-            {/* Antd component which renders a formatted <input type="password"> field */}
             <Input.Password
               className="input-field"
-              prefix={<LockOutlined className="site-form-item-icon" />}
-              // TODO: CRIO_TASK_MODULE_UNDERSTANDING_BASICS - Add a lock icon to the input bar (check how the "Password" input bar is rendered)
-=======
-            <Input.Password
-              className="input-field"
->>>>>>> 0028914987b519f8b78b9b157c3a1d7226433d58
               placeholder="Confirm Password"
               onChange={(e) => {
                 this.setState({
@@ -202,27 +185,15 @@ class Register extends React.Component {
               }}
             />
 
-<<<<<<< HEAD
-            {/* Antd component which renders a formatted <button type="button"> field */}
-            <Button onClick={this.register}
-              loading={this.state.loading}
-              type="primary"
-              // TODO: CRIO_TASK_MODULE_UNDERSTANDING_BASICS - Add an event handler which calls the "register()" function when the button is clicked
-=======
             <Button
               loading={this.state.loading}
               type="primary"
->>>>>>> 0028914987b519f8b78b9b157c3a1d7226433d58
             >
               Register
             </Button>
           </div>
         </div>
 
-<<<<<<< HEAD
-        {/* Display the footer */}
-=======
->>>>>>> 0028914987b519f8b78b9b157c3a1d7226433d58
         <Footer></Footer>
       </>
     );

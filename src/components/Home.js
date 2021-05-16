@@ -22,26 +22,10 @@ export default function App() {
               </Button>
             </Link>
 
-<<<<<<< HEAD
-            {/* TODO: CRIO_TASK_MODULE_UNDERSTANDING_BASICS - Add a Login button */}
-            <div className="home-buttons">
-            <Link to="/login">
-              <Button id="login-button" className="btn-block" type="primary" block={true}>
-                Login
-              </Button>
-            </Link>
-            
-            </div>
-          </div>
-        </div>
-        </div>
-        </>
-=======
             
           </div>
         </div>
       </div>
     </>
->>>>>>> 0028914987b519f8b78b9b157c3a1d7226433d58
   );
 }

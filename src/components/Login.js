@@ -28,18 +28,6 @@ class Login extends React.Component {
     };
   }
 
-<<<<<<< HEAD
-
-  // TODO: CRIO_TASK_MODULE_UNDERSTANDING_BASICS - Implement the login() function to display a message, "Login logic not implemented yet"
-  /**
-   * Definition for login handler
-   * This is the function that is called when the user clicks on the login button or submits the login form
-   *    - Display a message, "Login logic not implemented yet"
-   */
-  login = async () => {
-    message.info("Register logic not implemented yet");
-
-=======
   // TODO: CRIO_TASK_MODULE_LOGIN - Fetch the API response
   /**
    * Perform the API call over the network and return the response
@@ -143,7 +131,6 @@ class Login extends React.Component {
 
   login = async () => {
      this.validateInput();
->>>>>>> 0028914987b519f8b78b9b157c3a1d7226433d58
   };
 
   /**
@@ -187,12 +174,8 @@ class Login extends React.Component {
               loading={this.state.loading}
               type="primary"
               onClick={this.login}
-<<<<<<< HEAD
-            >Login
-=======
             >
               Login
->>>>>>> 0028914987b519f8b78b9b157c3a1d7226433d58
             </Button>
           </div>
         </div>
