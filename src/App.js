@@ -19,6 +19,7 @@ export default function App(props) {
 
   return (
     <div className="App">
+<<<<<<< HEAD
         {/* TODO: CRIO_TASK_MODULE_UNDERSTANDING_BASICS - To add route for /register */}
 
         {/* TODO: CRIO_TASK_MODULE_UNDERSTANDING_BASICS - To add route for /login */}
@@ -33,6 +34,15 @@ export default function App(props) {
           <Home/>
         </Route> 
         </Switch>
+=======
+
+
+        <Route path="/">
+          <Home />
+        </Route>
+
+
+>>>>>>> 0028914987b519f8b78b9b157c3a1d7226433d58
     </div>
   );
 }
