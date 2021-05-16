@@ -36,8 +36,7 @@ class Login extends React.Component {
    *    - Display a message, "Login logic not implemented yet"
    */
   login = async () => {
-    
-
+    message.info("Register logic not implemented yet");
 
   };
 
