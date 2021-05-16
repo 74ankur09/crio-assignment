@@ -32,7 +32,6 @@ export default function App(props) {
       <Route path="/login">
         <Login/>
       </Route>
-
     </div>
   );
 }
