@@ -64,6 +64,10 @@ class Register extends React.Component {
    * }
    */
   performAPICall = async () => {
+
+
+
+    
   };
 
   // TODO: CRIO_TASK_MODULE_LOGIN - Implement user input validation logic
