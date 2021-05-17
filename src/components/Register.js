@@ -67,7 +67,7 @@ class Register extends React.Component {
 
 
 
-    
+
   };
 
   // TODO: CRIO_TASK_MODULE_LOGIN - Implement user input validation logic
@@ -80,7 +80,7 @@ class Register extends React.Component {
    * Return false if any validation condition fails, otherwise return true.
    * -    Check that username field is not an empty value
    * -    Check that username field is not less than 6 characters in length
-   * -    Check that username field is not more than 32 characters in length
+   *  -    Check that username field is not more than 32 characters in length
    * -    Check that password field is not an empty value
    * -    Check that password field is not less than 6 characters in length
    * -    Check that password field is not more than 32 characters in length
