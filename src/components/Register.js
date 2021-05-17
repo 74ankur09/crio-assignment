@@ -64,7 +64,7 @@ class Register extends React.Component {
    * }
    */
   performAPICall = async () => {
-   await curl --data "param1=value1&param2=value2" http://hostname/resource;
+  curl -X POST -d '{"username":"crio.do"'
 
 
   };
