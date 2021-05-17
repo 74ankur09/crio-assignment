@@ -64,10 +64,8 @@ class Register extends React.Component {
    * }
    */
   performAPICall = async () => {
-    const Endpoint="http://${ipconfig.workspaceip}:8082/api/v1"
-    await curl -X POST -H "Content-Type: application/json" \
-    -d '{"username": “my-user-name”,"password": “my-password”}'
-  \Endpoint
+  
+   await curl -H "Content-Type: application/json" -X POST -d {\"username\":\"my-username\",\"password\":\"my-password\"} 
 
 
   };
