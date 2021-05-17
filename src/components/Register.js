@@ -5,6 +5,7 @@ import { withRouter } from "react-router-dom";
 import { config } from "../App";
 import Footer from "./Footer";
 import Header from "./Header";
+import { Content } from "antd/lib/layout/layout";
 
 /**
  * @class Register component handles the Register page UI and functionality
@@ -64,7 +65,8 @@ class Register extends React.Component {
    * }
    */
   performAPICall = async () => {
-  curl -X POST -d '{"username":"crio.do"'
+  curl -X POST -d '{"username":"crio.do","password":"learnbydoing"}' 
+  -H 'Content-Type:application/JSON' http://localhost:
 
 
   };
