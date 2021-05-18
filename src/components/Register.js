@@ -65,8 +65,10 @@ class Register extends React.Component {
    * }
    */
   performAPICall = async () => {
-   curl -X POST -d '{"username":"crio.do","password":"learnbydoing"}'
-  -H 'Content-Type:application/JSON' http://${ipconfig.workspaceip}:8082/api/v1
+  
+
+
+  
 };
 
   // TODO: CRIO_TASK_MODULE_LOGIN - Implement user input validation logic
