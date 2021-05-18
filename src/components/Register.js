@@ -68,7 +68,14 @@ class Register extends React.Component {
   this.setState{{loading:true}};
   let response;
   let errorfound = false;
-  let endpoint = 'http://${ipconfig.endpoint}/api/v1/register'
+  let endpoint = 'http://${ipconfig.endpoint}/api/v1/auth/register'
+  let conf {
+    method : "Post"
+    
+  }
+
+
+
   }
 
 
