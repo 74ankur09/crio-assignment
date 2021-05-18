@@ -68,7 +68,7 @@ class Register extends React.Component {
   this.setState{{loading:true}};
   this.setState{{loading:false}};
   try {
-    const result = await fetch('http://${config.backendpoint}/')
+    const result = await fetch('http://${config.backendpoint}/api/v1/auth/register');
   }
 
 
