@@ -107,6 +107,8 @@ class Register extends React.Component {
    * -    Check that confirmPassword field has the same value as password field
    */
   validateInput = () => {
+
+    
   };
 
   // TODO: CRIO_TASK_MODULE_LOGIN - Check API response
