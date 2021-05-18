@@ -65,10 +65,13 @@ class Register extends React.Component {
    * }
    */
   performAPICall = async () => {
-  
+  this.setState{{loading:true}};
+  this.setState{{loading:false}};
+  try {
+    const result = await fetch('http://${config.backendpoint}/')
+  }
 
 
-  
 };
 
   // TODO: CRIO_TASK_MODULE_LOGIN - Implement user input validation logic
