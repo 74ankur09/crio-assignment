@@ -69,17 +69,17 @@ class Register extends React.Component {
   let errorfound = false;
   let endpoint = `http://${ipconfig.endpoint}/api/v1/auth/register`
   let conf = {
-    method : "Post",
+    method : "POST",
     headers: {
-      "content-type":"application/json"
+      "content-type": "application/json",
       },
-      body:json.stringify({
+      body: Json.stringify({
         username: this.state.username,
         Password: this.state.password
       })
       }
       try {
-        response = await(await(response,conf)).json();
+        response = await(await fetch(endpoint,conf)).json();
       }
       catch(error){
         errorfound=true;
