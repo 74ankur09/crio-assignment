@@ -67,13 +67,13 @@ class Register extends React.Component {
   performAPICall = async () => {
   let response;
   let errorfound = false;
-  let endpoint = `http://${ipconfig.endpoint}/api/v1/auth/register`
+  let endpoint = `http://${config.endpoint}/api/v1/auth/register`
   let conf = {
     method : "POST",
     headers: {
       "content-type": "application/json",
       },
-      body: Json.stringify({
+      body: JSON.stringify({
         username: this.state.username,
         Password: this.state.password
       })
