@@ -66,6 +66,9 @@ class Register extends React.Component {
    */
   performAPICall = async () => {
   this.setState{{loading:true}};
+  let response;
+  let errorfound = false;
+  let endpoint = 'http://${ipconfig.endpoint}/api/v1/register'
   }
 
 
