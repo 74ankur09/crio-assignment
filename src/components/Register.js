@@ -85,13 +85,10 @@ class Register extends React.Component {
       catch(error){
         errorfound=true;
       }
-      this.setState{{loading:false}}
-
-
-
-  }
-
-
+      this.setState({loading:false});
+      if(this.validateResponse(errorfound,response)){
+        return response;
+      }
 };
 
   // TODO: CRIO_TASK_MODULE_LOGIN - Implement user input validation logic
