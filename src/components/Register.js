@@ -106,8 +106,8 @@ class Register extends React.Component {
    * -    Check that password field is not more than 32 characters in length
    * -    Check that confirmPassword field has the same value as password field
    */
-  validateInput = () => {
-
+  validateInput = (errored, response) => {
+    if ()
     
   };
 
