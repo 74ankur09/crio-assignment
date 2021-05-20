@@ -156,7 +156,7 @@ class Register extends React.Component {
       message.error("Registeration failed")
     }
     if (!response.success){
-      message.error("")
+      message.error("  ")
     }
 
   };
