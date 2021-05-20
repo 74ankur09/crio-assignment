@@ -185,6 +185,7 @@ class Register extends React.Component {
    *      -   Redirect the user to the "/login" page
    */
   register = async () => {
+    if (this.validateInput())
      const response = await this.performAPICall();
   };
 
