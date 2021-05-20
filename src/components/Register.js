@@ -107,7 +107,13 @@ class Register extends React.Component {
    * -    Check that confirmPassword field has the same value as password field
    */
   validateInput = (errored, response) => {
-    if ()
+    if (errored || (!response.success && !response.message)){
+      message.error("Registration failed");
+      return false;
+    }
+    if(!response.success){
+      message.error
+    }
     
   };
 
