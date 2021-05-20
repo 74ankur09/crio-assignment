@@ -108,7 +108,10 @@ class Register extends React.Component {
    */
   validateInput = () => {
   if(!this.state.username){
-  message.error("Invalid input")
+  message.error("Invalid input: Username not provided");
+  }
+  if(this.state.password){
+    message.error("Invalid input: Password not provided");
   }
   };
 
@@ -148,12 +151,14 @@ class Register extends React.Component {
    */
   validateResponse = (errored, response) => {
     if (errored ||(!response.success && response.message)){
-      message.error("Registeration failed")
+      message.error("Registeration failed");
+      return false;
     }
     if (!response.success){
-      message.error("  ")
+      message.error(response.message);
+      return false;
     }
-
+    return true;
   };
 
   // TODO: CRIO_TASK_MODULE_LOGIN - Implement the register function
