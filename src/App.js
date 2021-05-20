@@ -31,13 +31,9 @@ export default function App(props) {
         </Route>
         <Route path="/">
           <Home/>
-        </Route> 
-        </Switch>
-
-
-        <Route path="/">
-          <Home />
+         </Route>
         </Route>
+        </sw
 
 
     </div>
