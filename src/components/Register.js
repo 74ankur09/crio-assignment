@@ -106,15 +106,10 @@ class Register extends React.Component {
    * -    Check that password field is not more than 32 characters in length
    * -    Check that confirmPassword field has the same value as password field
    */
-  validateInput = (errored, response) => {
-    if (errored || (!response.success && !response.message)){
-      message.error("Registration failed");
-      return false;
-    }
-    if(!response.success){
-      message.error
-    }
-    
+  validateInput = () => {
+  if(!this.state.username){
+  message.error("Invalid input")
+  }
   };
 
   // TODO: CRIO_TASK_MODULE_LOGIN - Check API response
