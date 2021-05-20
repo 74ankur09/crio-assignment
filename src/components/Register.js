@@ -189,8 +189,10 @@ class Register extends React.Component {
      const response = await this.performAPICall();
      if(response){
        this.setState({username:" ",password:" ",confirmPassword:" "});
-       message.success("")
+       message.success("Successfully Registered User");
+       this.props.history.push("/login");
      }
+    }
   };
 
   /**
