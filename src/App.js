@@ -25,17 +25,13 @@ export default function App(props) {
         <Switch>
         <Route path="/login">
         <Login/>
-      </Route>
-      <Route path="/register">
+        </Route>
+        <Route path="/register">
         <Register/>
         </Route>
         <Route path="/">
           <Home/>
          </Route>
-        </Route>
-        </sw
-
-
     </div>
   );
 }
