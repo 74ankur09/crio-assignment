@@ -121,8 +121,10 @@ class Register extends React.Component {
   return false;
   }
   if(this.state.password !== this.state.confirmPassword){
-    message.error("Invalid input: Conform ")
+    message.error("Invalid input: Confirm Password doesnot match");
+    return false;
   }
+  return true;
   };
 
   // TODO: CRIO_TASK_MODULE_LOGIN - Check API response
