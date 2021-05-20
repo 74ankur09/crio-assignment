@@ -152,6 +152,11 @@ class Register extends React.Component {
    *
    */
   validateResponse = (errored, response) => {
+    if (errored ||(!response.success && response.message)){
+      message.error("Registeration failed")
+    }
+    if (!response.success)
+
   };
 
   // TODO: CRIO_TASK_MODULE_LOGIN - Implement the register function
