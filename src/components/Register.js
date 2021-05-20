@@ -116,9 +116,11 @@ class Register extends React.Component {
     message.error("Invalid input: Password not provided")
     return false;
   }
-  if(this.state.username.length<6 || this.state.username.length>32 ||){
-
+  if(this.state.username.length<6 || this.state.username.length>32 || this.state.password<6 || this.state.password>32){
+  message.error("Invalid input: Username and Password length should be between 6 and 32");
+  return false;
   }
+  if(this.state)
   };
 
   // TODO: CRIO_TASK_MODULE_LOGIN - Check API response
