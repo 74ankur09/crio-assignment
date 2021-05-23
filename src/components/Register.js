@@ -67,6 +67,7 @@ class Register extends React.Component {
   performAPICall = async () => {
   let response;
   let errorfound = false;
+  this.setState({loading:true});
   let endpoint = `http://${config.endpoint}/api/v1/auth/register`
   let conf = {
     method : "POST",

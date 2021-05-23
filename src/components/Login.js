@@ -61,7 +61,7 @@ class Login extends React.Component {
    * }
    */
   performAPICall = async () => {
-    let response;
+  let response;
    let errorcaught = false;
    this.setState({loading : true});
    let endpoint = `${config.endpoint}/api/v1/auth/login`;
