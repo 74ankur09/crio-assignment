@@ -69,7 +69,7 @@ class Register extends React.Component {
   let errorfound = false;
   this.setState({loading:true});
   let endpoint = `http://${config.endpoint}/api/v1/auth/register`;
-  let conf = {
+  let requestoption = {
     method : "POST",
     headers: {
       "Content-Type": "application/json",
@@ -80,7 +80,7 @@ class Register extends React.Component {
       })
       }
       try {
-        response = await(await fetch(endpoint,conf)).json();
+        response = await(await fetch(endpoint,requestoption)).json();
       }
       catch(error){
         errorfound=true;
