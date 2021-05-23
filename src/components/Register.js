@@ -225,7 +225,8 @@ class Register extends React.Component {
             {/* Antd component which renders a formatted <input type="password"> field */}
             <Input.Password
               className="input-field"
-              prefix={<LockOutlined className="site-form-item-icon" />}
+              placeholder="Password"
+              prefix={<LockOutlined className="site-form-item-icon"/>}
               onChange={(e) => {
                 this.setState({
                   password: e.target.value,
@@ -236,6 +237,7 @@ class Register extends React.Component {
             <Input.Password
               className="input-field"
               placeholder="Confirm Password"
+              prefix={<LockOutlined className="site-form-item-icon"/>}
               onChange={(e) => {
                 this.setState({
                   confirmPassword: e.target.value,
