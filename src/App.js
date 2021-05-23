@@ -30,9 +30,9 @@ export default function App(props) {
         <Register/>
         </Route>
         <Route path="/">
-          <Home/>
-         </Route>
-         </Switch>
+        <Home/>
+        </Route>
+        </Switch>
     </div>
   );
 }
