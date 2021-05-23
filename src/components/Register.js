@@ -65,32 +65,33 @@ class Register extends React.Component {
    * }
    */
   performAPICall = async () => {
-  let response;
-  let errorfound = false;
-  this.setState({loading:true});
-  let endpoint = `http://${config.endpoint}/auth/register`;
-  let requestoption = {
-    method : "POST",
-    headers: {
-      "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        username: this.state.username,
-        Password: this.state.password
-      })
-      }
-      try {
-        let data  = await fetch(endpoint,requestoption);
-        response = data.json();
-      }
-      catch(error){
-        errorfound=true;
-      }
-      this.setState({loading:false});
-      if(this.validateResponse(errorfound,response)){
-        return response;
-      }
-};
+    this.setState({loading:true});
+    var response;
+    var errored=false;
+    try {
+      response = await (
+        await fetch(`${config.endpoint}/auth/register`, {
+          method : "POST",
+          headers : {
+            "Content-Type": "application/json",
+          },
+          body:JSON.stringify({
+            username: this.state.username,
+            password: this.state.password,
+          }),
+        })
+      ).json();
+    } catch(e) {
+      errored= true;
+    }
+    this.setState({
+      loading: false,
+    });
+    console.log(response);
+    if(this.validateResponse(errored, response)) {
+      return response;
+    }
+  };
 
   // TODO: CRIO_TASK_MODULE_LOGIN - Implement user input validation logic
   /**
