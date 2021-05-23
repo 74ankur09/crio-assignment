@@ -71,8 +71,8 @@ class Login extends React.Component {
        "content-type":"application/json",
      },
      body : JSON.stringify({
-       username=this.username,
-       password=this.password
+       username=this.state.username,
+       password=this.state.password
      })
    }
    try {
