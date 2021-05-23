@@ -75,7 +75,13 @@ class Login extends React.Component {
        password=this.password
      })
    }
-
+   try {
+     response = await(await fetch (endpoint,conf)).json();
+   }
+   catch(error){
+     errorcaught=true;
+   }
+   this.setState({loading:false});
    
     
   };
