@@ -99,7 +99,16 @@ class Login extends React.Component {
    * -    Check that password field is not an empty value
    */
   validateInput = () => {
-    if()
+    if(!this.state.username){
+      message.error("Invalid input: username not provided");
+      return false;
+    }
+    if(!this.state.password){
+      message.error("Invalid input: password is not provided");
+      return false;
+    }
+    return true; 
+
   };
 
   // TODO: CRIO_TASK_MODULE_LOGIN - Check the API response
@@ -120,6 +129,7 @@ class Login extends React.Component {
    * When there is no error and API call is successful, return true.
    */
   validateResponse = (errored, response) => {
+   if(errored )
   };
 
   // TODO: CRIO_TASK_MODULE_LOGIN - Persist user's login information
