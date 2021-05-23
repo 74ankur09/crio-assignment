@@ -80,7 +80,8 @@ class Register extends React.Component {
       })
       }
       try {
-        response = await(await fetch(endpoint,requestoption)).json();
+        let data  = await fetch(endpoint,requestoption);
+        response = data.json();
       }
       catch(error){
         errorfound=true;
