@@ -160,7 +160,7 @@ class Login extends React.Component {
   persistLogin = (token, username, balance) => {
     localStorage.setItem("token", token);
     localStorage.setItem("username",username);
-    localStorage.setItem("")
+    localStorage.setItem("balance",balance);
   };
 
   // TODO: CRIO_TASK_MODULE_LOGIN - Implement the login function
@@ -177,7 +177,15 @@ class Login extends React.Component {
    */
 
   login = async () => {
-     this.validateInput();
+     if(this.validateInput()){
+       let response= await this.performAPICall();
+     }
+     if(response){
+       this.persistLogin(response.token,response.username,response.balance);
+       this.setState({username: "",password: " ",confirmpassword: " "});
+       message.success("Successful Login");
+       this.props.his
+     }
   };
 
   /**
