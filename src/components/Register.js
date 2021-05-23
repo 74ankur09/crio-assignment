@@ -68,7 +68,7 @@ class Register extends React.Component {
   let response;
   let errorfound = false;
   this.setState({loading:true});
-  let endpoint = `http://${config.endpoint}/api/v1/auth/register`;
+  let endpoint = `http://${config.endpoint}/auth/register`;
   let requestoption = {
     method : "POST",
     headers: {
