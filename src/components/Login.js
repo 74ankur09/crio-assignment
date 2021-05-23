@@ -64,7 +64,17 @@ class Login extends React.Component {
    let response;
    let errorcaught = false;
    this.setState({loading : true});
-   let endpoint = `${config.endpoint}/auth`
+   let endpoint = `${config.endpoint}/auth/login`;
+   let conf ={
+     method = "Post",
+     header: {
+       "content-type":"application/json",
+     },
+     body : JSON.stringify({
+       username=this.username,
+       password=this.password
+     })
+   }
 
    
     
