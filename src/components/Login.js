@@ -66,13 +66,13 @@ class Login extends React.Component {
    this.setState({loading : true});
    let endpoint = `${config.endpoint}/auth/login`;
    let conf ={
-     method = "Post",
+     method :"Post",
      header: {
        "content-type":"application/json",
      },
      body : JSON.stringify({
-       username=this.state.username,
-       password=this.state.password
+       username: this.state.username,
+       password: this.state.password
      })
    }
    try {
