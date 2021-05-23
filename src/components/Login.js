@@ -128,7 +128,7 @@ class Login extends React.Component {
    * When there is an error returned by backend, display the given message field and return false.
    * When there is no error and API call is successful, return true.
    */
-  validateResponse = (errored, response) => {
+  validateResponse = (errored,response) => {
    if(errored || (!message.success && response.message))
    {
      message.error("Registration failed");
