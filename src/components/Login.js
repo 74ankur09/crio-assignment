@@ -61,7 +61,7 @@ class Login extends React.Component {
    * }
    */
   performAPICall = async () => {
-   let response;
+    let response;
    let errorcaught = false;
    this.setState({loading : true});
    let endpoint = `${config.endpoint}/auth/login`;
@@ -76,7 +76,7 @@ class Login extends React.Component {
      })
    }
    try {
-     response = await(await fetch (endpoint,conf)).json();
+    response = await(await fetch (endpoint,conf)).json();
    }
    catch(error){
      errorcaught=true;
@@ -177,8 +177,9 @@ class Login extends React.Component {
    */
 
   login = async () => {
+    let response;
      if(this.validateInput()){
-       let response= await this.performAPICall();
+      response= await this.performAPICall();
      }
      if(response){
        this.persistLogin(response.token,response.username,response.balance);

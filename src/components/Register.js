@@ -71,7 +71,7 @@ class Register extends React.Component {
   let conf = {
     method : "POST",
     headers: {
-      "content-type": "application/json",
+      "Content-Type": "application/json",
       },
       body: JSON.stringify({
         username: this.state.username,
