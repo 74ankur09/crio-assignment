@@ -129,7 +129,16 @@ class Login extends React.Component {
    * When there is no error and API call is successful, return true.
    */
   validateResponse = (errored, response) => {
-   if(errored )
+   if(errored || (!message.success && response.message))
+   {
+     message.error("Registration failed");
+     return false;
+   }
+   if(!response.success){
+     message.error(response.message);
+     return false;
+   }
+   return true;
   };
 
   // TODO: CRIO_TASK_MODULE_LOGIN - Persist user's login information
@@ -149,6 +158,9 @@ class Login extends React.Component {
    * -    `balance` field in localStorage can be used to store the balance amount in the user's wallet
    */
   persistLogin = (token, username, balance) => {
+    localStorage.setItem("token", token);
+    localStorage.setItem("username",username);
+    localStorage.setItem("")
   };
 
   // TODO: CRIO_TASK_MODULE_LOGIN - Implement the login function
