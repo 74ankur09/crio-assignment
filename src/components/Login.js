@@ -82,8 +82,9 @@ class Login extends React.Component {
      errorcaught=true;
    }
    this.setState({loading:false});
-   
-    
+   if(this.validateResponse(errorcaught,response)){
+     return response;
+   }
   };
 
   // TODO: CRIO_TASK_MODULE_LOGIN - Validate the input
@@ -98,6 +99,7 @@ class Login extends React.Component {
    * -    Check that password field is not an empty value
    */
   validateInput = () => {
+    if()
   };
 
   // TODO: CRIO_TASK_MODULE_LOGIN - Check the API response
