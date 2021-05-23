@@ -184,7 +184,7 @@ class Login extends React.Component {
        this.persistLogin(response.token,response.username,response.balance);
        this.setState({username: "",password: " ",confirmpassword: " "});
        message.success("Successful Login");
-       this.props.his
+       this.props.history.push("/products");
      }
   };
 
