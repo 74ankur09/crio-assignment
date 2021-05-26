@@ -85,7 +85,7 @@ class Register extends React.Component {
       errored= true;
     }
     this.setState({
-      loading: false,
+      loading:false,
     });
     console.log(response);
     if(this.validateResponse(errored, response)) {
