@@ -65,30 +65,31 @@ class Register extends React.Component {
    * }
    */
   performAPICall = async () => {
-    this.setState({loading:true});
-    var response;
-    var errored=false;
+    let response = {};
+    let errored = false;
+    this.setState({
+      loading: true,
+    });
     try {
       response = await (
         await fetch(`${config.endpoint}/auth/register`, {
-          method : "POST",
-          headers : {
+          method: "POST",
+          headers: {
             "Content-Type": "application/json",
           },
-          body:JSON.stringify({
+          body: JSON.stringify({
             username: this.state.username,
             password: this.state.password,
           }),
         })
       ).json();
-    } catch(e) {
-      errored= true;
+    } catch (e) {
+      errored = true;
     }
     this.setState({
-      loading:false,
+      loading: false,
     });
-    console.log(response);
-    if(this.validateResponse(errored, response)) {
+    if (this.validateResponse(errored, response)) {
       return response;
     }
   };
