@@ -117,7 +117,7 @@ class Register extends React.Component {
   if(this.state.password){
     message.error("Invalid input: Password not provided");
   }if(this.state.password){
-    message.error("Invalid input: Password not provided");
+    message.error("Invalid input: Password not provided")
     return false;
   }
   if(this.state.username.length<6 || this.state.username.length>32 || this.state.password<6 || this.state.password>32){
