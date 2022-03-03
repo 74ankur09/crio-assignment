@@ -64,19 +64,21 @@ class Login extends React.Component {
   let response;
    let errorcaught = false;
    this.setState({loading : true});
-   let endpoint = `${config.endpoint}/api/v1/auth/login`;
-   let conf ={
-     method :"Post",
-     header: {
-       "content-type":"application/json",
-     },
-     body: JSON.stringify({
-       username: this.state.username,
-       password: this.state.password
-     })
-   }
+   let endpoint = `${config.endpoint}/auth/login`;
+   let conf = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      username: this.state.username,
+      password: this.state.password,
+    }),
+  }
    try {
-    response = await(await fetch (endpoint,conf)).json();
+     console.log('conf' ,conf)
+    response = (await fetch (endpoint,conf))
+    response = await response.json();
    }
    catch(error){
      errorcaught=true;
@@ -129,6 +131,7 @@ class Login extends React.Component {
    * When there is no error and API call is successful, return true.
    */
   validateResponse = (errored,response) => {
+    console.log(message.success, response, errored)
    if(errored || (!message.success && response.message))
    {
      message.error("Registration failed");
@@ -178,10 +181,12 @@ class Login extends React.Component {
 
   login = async () => {
     let response;
+    console.log(this.validateInput());
      if(this.validateInput()){
       response= await this.performAPICall();
      }
      if(response){
+       console.log('ankur')
        this.persistLogin(response.token,response.username,response.balance);
        this.setState({username: "",password: " ",confirmpassword: " "});
        message.success("Successful Login");
@@ -208,7 +213,9 @@ class Login extends React.Component {
               className="input-field"
               prefix={<UserOutlined className="site-form-item-icon" />}
               placeholder="Username"
-              onChange={(e) => {
+              onChange={(e) =>
+                 {
+                   console.log('------',e.target)
                 this.setState({
                   username: e.target.value,
                 });
@@ -229,7 +236,7 @@ class Login extends React.Component {
             <Button
               loading={this.state.loading}
               type="primary"
-              onClick={this.login}
+              onClick={()=>this.login()}
             >
               Login
             </Button>

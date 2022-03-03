@@ -114,9 +114,9 @@ class Register extends React.Component {
   if(!this.state.username){
   message.error("Invalid input: Username not provided");
   }
-  if(this.state.password){
+  if(!this.state.password){
     message.error("Invalid input: Password not provided");
-  }if(this.state.password){
+  }if(!this.state.confirmPassword){
     message.error("Invalid input: Password not provided")
     return false;
   }
@@ -250,6 +250,7 @@ class Register extends React.Component {
             />
 
             <Button
+              onClick={() => (this.register())}
               loading={this.state.loading}
               type="primary"
             >

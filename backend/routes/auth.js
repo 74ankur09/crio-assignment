@@ -8,7 +8,7 @@ const config = require('../config.json');
 
 router.post('/register', (req, res) => {
     console.log(`GET request to "/auth/register" received for user}`)
-
+    console.log(req.body)
     users.findOne({ username: req.body.username }, (err, user) => {
         if (err) {
             return handleError(res, err);
@@ -51,7 +51,8 @@ router.post('/register', (req, res) => {
 
 router.post('/login', (req, res) => {
     console.log(`POST request to "/auth/login" received`)
-
+    console.log('----[----------------------')
+    console.log(req.body)
     users.findOne({ username: req.body.username }, (err, user) => {
         if (err) {
             return handleError(res, err);
